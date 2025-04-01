@@ -1,51 +1,12 @@
-import { useEffect, useRef } from "react";
 import { Link } from "react-scroll";
+import { ReactTyped } from "react-typed";
+
 import { useMediaQuery } from "@/hooks";
 import styles from "./styles.module.scss";
-import gsap from "gsap";
 
 const Hero = () => {
   const isMobile800 = useMediaQuery(800);
   const isMobile485 = useMediaQuery(485);
-
-  const heroTitle = useRef<HTMLHeadingElement>(null);
-
-  useEffect(() => {
-    const colors = gsap.to(heroTitle.current, {
-      paused: true,
-      duration: 20,
-      repeat: -1,
-      "--hue": 360,
-    });
-
-    const doRandom = () => {
-      gsap
-        .timeline()
-        .to(heroTitle.current, {
-          duration: 0.1,
-          opacity: function () {
-            return gsap.utils.random(0.9, 0.95);
-          },
-          delay: function () {
-            return gsap.utils.random(0.1, 2);
-          },
-        })
-        .to(heroTitle.current, {
-          duration: 0.1,
-          opacity: 1,
-          onComplete: function () {
-            doRandom();
-          },
-        });
-    };
-
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-    if (!mediaQuery || !mediaQuery.matches) {
-      colors.play();
-      doRandom();
-    }
-  }, []);
 
   return (
     <section
@@ -58,8 +19,18 @@ const Hero = () => {
     >
       <div className="sub-container">
         <div className={styles.hero__inner}>
-          <h1 className={styles.hero__title} ref={heroTitle}>
-            Full - Stack Developer
+          <h1 className={styles.hero__title}>
+            <ReactTyped
+              strings={["Full - Stack Developer"]}
+              startDelay={300}
+              typeSpeed={100}
+              backSpeed={100}
+              backDelay={100}
+              smartBackspace={true}
+              loop={true}
+              showCursor={true}
+              cursorChar={"!"}
+            />
           </h1>
           <h3 className={styles.hero__name}>Nuraga Yusifli</h3>
           <div className={styles.hero__description}>
