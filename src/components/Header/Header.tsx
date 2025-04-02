@@ -6,7 +6,7 @@ import styles from "./styles.module.scss";
 import stylesMenu from "./mobileMenu.module.scss";
 
 const Header = () => {
-  const isMobile = useMediaQuery(640);
+  const isMobile = useMediaQuery(650);
   const [menuOpen, setMenuOpen] = useState(false);
   const spy = true;
   const smooth = true;

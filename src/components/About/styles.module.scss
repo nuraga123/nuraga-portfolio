@@ -2,19 +2,20 @@
   padding-top: 140px;
   padding-bottom: 70px;
   height: 100vh;
+  position: relative;
 
   @media all and (max-width: 1080px) {
     padding-top: 86px;
   }
 
   @media all and (max-width: 800px) {
-    padding-top: 230px;
     padding-bottom: 44px;
   }
 
   @media all and (max-width: 485px) {
-    padding-top: 0;
+    padding-top: 30px;
     padding-bottom: 22px;
+    height: 100%;
   }
 
   &__sub_container {
@@ -68,6 +69,34 @@
       width: 100%;
       height: 100%;
       border-radius: 50%;
+
+      @media (max-width: 790px) {
+        height: 95%;
+      }
+
+      @media (max-width: 770px) {
+        height: 92.5%;
+      }
+
+      @media (max-width: 770px) {
+        height: 97%;
+      }
+
+      @media (max-width: 720px) {
+        height: 90%;
+      }
+
+      @media (max-width: 700px) {
+        height: 85%;
+      }
+
+      @media (max-width: 650px) {
+        height: 82.5%;
+      }
+
+      @media (max-width: 630px) {
+        height: 100%;
+      }
     }
 
     // Вложенный класс для бордера (SVG)

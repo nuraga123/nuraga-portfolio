@@ -6,7 +6,7 @@ import { useMediaQuery } from "@/hooks";
 import styles from "./styles.module.scss";
 
 const Hero = () => {
-  const isMobile800 = useMediaQuery(800);
+  const isMobile650 = useMediaQuery(650);
   const isMobile485 = useMediaQuery(485);
 
   const [isTaping, setIsTaping] = useState(true);
@@ -19,7 +19,7 @@ const Hero = () => {
       style={{
         backgroundImage: isMobile485
           ? ""
-          : `url('/img/hero-bg${isMobile800 ? "-mobile" : ""}.png')`,
+          : `url('/img/hero-bg${isMobile650 ? "-mobile" : ""}.png')`,
       }}
     >
       <div className="sub-container">
@@ -60,7 +60,7 @@ const Hero = () => {
           >
             Связаться с разработчиком
           </Link>
-          {!isMobile800 && (
+          {!isMobile650 && (
             <Link
               to="about"
               spy={true}
