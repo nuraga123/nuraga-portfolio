@@ -1,4 +1,6 @@
-export const portfolioItems1 = [
+import { IPortfolioTabContent } from "../Content";
+
+const portfolioItems1 = [
   {
     id: 1,
     img: "/img/portfolio-img-1.png",
@@ -37,7 +39,7 @@ export const portfolioItems1 = [
   },
 ];
 
-export const portfolioItems2 = [
+const portfolioItems2 = [
   {
     id: 1,
     img: "/img/portfolio-img-3.png",
@@ -76,7 +78,7 @@ export const portfolioItems2 = [
   },
 ];
 
-export const portfolioItems3 = [
+const portfolioItems3 = [
   {
     id: 1,
     img: "/img/portfolio-img-2.png",
@@ -115,7 +117,7 @@ export const portfolioItems3 = [
   },
 ];
 
-export const portfolioItems4 = [
+const portfolioItems4 = [
   {
     id: 1,
     img: "/img/portfolio-img-3.png",
@@ -152,6 +154,15 @@ export const portfolioItems4 = [
     link: "#",
     title: "Сайт грузоперевозок «Сервис»",
   },
+];
+
+
+
+export const portfolioItems = [
+  portfolioItems1,
+  portfolioItems2,
+  portfolioItems3,
+  portfolioItems4,
 ];
 
 export const hiddenPortfolioItemsArray = [
