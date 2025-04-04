@@ -1,5 +1,3 @@
-import { IPortfolioTabContent } from "../Content";
-
 const portfolioItems1 = [
   {
     id: 1,
