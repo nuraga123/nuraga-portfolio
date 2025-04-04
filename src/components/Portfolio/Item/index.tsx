@@ -10,6 +10,7 @@ interface IPortfolioTabItem {
 const PortfolioTabItem = ({ title, imgSrc, link }: IPortfolioTabItem) => (
   <div className={styles.portfolio__list__inner}>
     <a className={styles.portfolio__list__item__link} href={link}>
+      <h3 className={styles.portfolio__list__item__title}>{title}</h3>
       <Image
         width={300}
         height={300}
@@ -18,7 +19,6 @@ const PortfolioTabItem = ({ title, imgSrc, link }: IPortfolioTabItem) => (
         src={imgSrc}
         alt={title}
       />
-      <h3 className={styles.portfolio__list__item__title}>{title}</h3>
     </a>
   </div>
 );

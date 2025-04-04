@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
-import styles from "@/components/Portfolio/styles.module.scss";
+import Image from "next/image";
+import styles from "./styles.module.scss";
 
 interface IPortfolioSliderItem {
   title: string;
@@ -8,12 +8,19 @@ interface IPortfolioSliderItem {
 }
 
 const PortfolioSliderItem = ({ title, imgSrc, link }: IPortfolioSliderItem) => (
-  <div className={styles.portfolio__slide}>
-    <a className={styles.portfolio__slide__link} href={link}>
-      <span className={styles.portfolio__slide__inner}>
-        <span className={styles.portfolio__slide__text}>{title}</span>
+  <div className={styles.slide}>
+    <a className={styles.slide__link} href={link}>
+      <span className={styles.slide__inner}>
+        <span className={styles.slide__text}>{title}</span>
       </span>
-      <img className={styles.portfolio__slide__img} src={imgSrc} alt={title} />
+      <Image
+        className={styles.slide__img}
+        src={imgSrc}
+        alt={title}
+        width={300}
+        height={300}
+        priority={true}
+      />
     </a>
   </div>
 );

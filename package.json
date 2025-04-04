@@ -24,6 +24,7 @@
     "react-toastify": "^11.0.5",
     "react-typed": "^2.0.12",
     "sass": "^1.86.0",
+    "swiper": "^11.2.6",
     "typed.js": "^2.1.0"
   },
   "devDependencies": {

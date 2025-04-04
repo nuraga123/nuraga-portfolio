@@ -1,0 +1,37 @@
+.slide {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &__inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    padding: 16px 8px;
+    background: rgba(21, 36, 72, 0.2);
+    backdrop-filter: blur(50px);
+  }
+
+  &__text {
+    font-family: "Lato";
+    font-weight: 500;
+    font-size: 18px;
+    color: #f2f2f2;
+
+    @media all and (max-width: 485px) {
+      font-size: 14px;
+    }
+
+    @media all and (max-width: 400px) {
+      font-size: 12px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+  }
+}
