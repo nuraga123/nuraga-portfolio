@@ -58,6 +58,7 @@ const Portfolio = () => {
             ))}
           </ul>
         </div>
+
         {!isMobile && (
           <ul className={styles.portfolio__list}>
             {currentPortfolioItems && (
@@ -84,6 +85,7 @@ const Portfolio = () => {
           </div>
         )}
       </div>
+
       {isMobile && (
         <div className={styles.portfolio__list__mobile}>
           <div className={styles.portfolio__list__mobile__container}>
