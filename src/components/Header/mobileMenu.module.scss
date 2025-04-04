@@ -15,6 +15,7 @@
   backdrop-filter: blur(60px);
 
   &.open {
+    z-index: 999;
     opacity: 1;
     visibility: visible;
     transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
