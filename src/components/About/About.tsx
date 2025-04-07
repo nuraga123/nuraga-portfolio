@@ -61,10 +61,12 @@ const About = () => {
             </p>
           </div>
 
-          {!isMobile1080 && <SocialList />}
+          {!isMobile1080 && <SocialList isFlexColumn={true} />}
         </div>
       </div>
-      <div className="sub-container">{isMobile1080 && <SocialList />}</div>
+      <div className="sub-container">
+        {isMobile1080 && <SocialList isFlexColumn={true} />}
+      </div>
     </section>
   );
 };

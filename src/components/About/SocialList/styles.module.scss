@@ -19,17 +19,14 @@
     align-items: center;
 
     &:not(:last-child) {
-      margin-bottom: 25px;
-
+      margin-right: 20px;
       @media all and (max-width: 1080px) {
         margin-bottom: 0;
 
         &:not(:last-child) {
-          margin-right: 28px;
+          margin-bottom: 28px;
 
           @media all and (max-width: 485px) {
-            margin-right: 0;
-
             &:not(:last-child) {
               margin-bottom: 16px;
             }
@@ -96,28 +93,31 @@
         }
       }
 
-      &__icon__fb img {
-        top: 3px;
-        left: 9px;
-      }
-
       &__icon__vk img {
-        top: 11px;
+        top: 6px;
         left: 6px;
       }
 
-      &__icon__yt img {
-        top: 10px;
-        left: 7px;
-      }
-
       &__text {
-        margin-right: 25px;
+        margin-left: 20px;
 
         @media all and (max-width: 1080px) {
-          margin-right: 10px;
+          margin-left: 15px;
         }
       }
     }
+  }
+}
+
+.isFlexColumn {
+  height: 170px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &__span {
+    width: 100%;
   }
 }

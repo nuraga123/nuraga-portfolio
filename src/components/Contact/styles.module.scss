@@ -1,0 +1,56 @@
+.contact {
+  padding-top: 90px;
+  padding-top: 70px;
+
+  &__inner {
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 32px;
+  }
+
+  &__text {
+    margin: 0;
+    max-width: 500px;
+    font-family: "Raleway";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+    color: #f2f2f2;
+  }
+
+  &__text:nth-child(2) {
+    margin-bottom: 88px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 67px;
+    max-width: 154px;
+    position: relative;
+
+    &__text {
+      font-family: "Raleway";
+      font-weight: 600;
+      font-size: 24px;
+      color: #ffffff;
+    }
+
+    &__arrow {
+      position: absolute;
+      top: 15px;
+      left: -22px;
+    }
+
+    &__border {
+      margin-top: 17px;
+      display: block;
+      height: 2px;
+      background: linear-gradient(
+        89.99deg,
+        #00d1ff 0%,
+        rgba(255, 34, 141, 0) 100%
+      );
+    }
+  }
+}
