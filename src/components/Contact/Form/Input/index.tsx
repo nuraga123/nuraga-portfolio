@@ -5,9 +5,16 @@ interface IInputProps {
   text: string;
   placeholder: string;
   name: string;
+  required: boolean;
 }
 
-const ContactInput = ({ type, text, placeholder, name }: IInputProps) => {
+const ContactInput = ({
+  type = "",
+  text = "",
+  placeholder = "",
+  name = "",
+  required = false,
+}: IInputProps) => {
   return (
     <label htmlFor="name" className={styles.form__label}>
       <span className={styles.form__label__text}>{text}</span>
@@ -17,6 +24,7 @@ const ContactInput = ({ type, text, placeholder, name }: IInputProps) => {
         name={name}
         className={styles.form__label__input}
         placeholder={placeholder}
+        required={required}
       />
     </label>
   );

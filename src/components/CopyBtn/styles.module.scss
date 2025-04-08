@@ -1,0 +1,18 @@
+.copy_btn {
+  border: none;
+  border-left: 3px solid #00b4ff;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 7px;
+  outline: none;
+  background-color: #fff;
+  color: #f2f2f2;
+  padding: 10px 5px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #00b4ff;
+    color: #fff;
+    border-color: #fff;
+  }
+}

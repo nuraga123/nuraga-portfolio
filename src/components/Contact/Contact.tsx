@@ -32,7 +32,7 @@ const Contact = () => {
               <span className={styles.contact__title__border} />
             </h3>
 
-            <SocialList isFlexColumn={true} />
+            <SocialList />
           </div>
 
           <div className={styles.contact__right}>

@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <NextNProgress />
       <Component {...pageProps} />
       <ToastContainer
-        position="bottom-right"
+        position="top-right"
         hideProgressBar={false}
         closeOnClick
         rtl={false}
