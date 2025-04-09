@@ -1,4 +1,4 @@
-import { FormEvent, useState, useRef, MutableRefObject } from "react";
+import { FormEvent, useState, useRef } from "react";
 import emailJS from "@emailjs/browser";
 import ContactInput from "./Input";
 import styles from "./styles.module.scss";
