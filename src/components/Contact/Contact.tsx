@@ -14,16 +14,6 @@ const Contact = () => {
       <div className="sub-container">
         <div className={styles.contact__inner}>
           <div className={styles.contact__left}>
-            <p className={styles.contact__text}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Doloribus, quas.
-            </p>
-
-            <p className={styles.contact__text}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Doloribus, quas.
-            </p>
-
             <h3 className={styles.contact__title}>
               <span className={styles.contact__title__text}>Напиши нам</span>
               <span className={styles.contact__title__arrow}>
@@ -32,11 +22,21 @@ const Contact = () => {
               <span className={styles.contact__title__border} />
             </h3>
 
-            <SocialList />
+            <Form />
           </div>
 
           <div className={styles.contact__right}>
-            <Form />
+            <p className={styles.contact__text}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Doloribus, quas.
+            </p>
+
+            <p className={styles.contact__text}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Doloribus, quas.
+            </p>
+
+            <SocialList />
           </div>
         </div>
       </div>

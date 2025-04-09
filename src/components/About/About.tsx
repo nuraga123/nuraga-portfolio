@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useMediaQuery } from "@/hooks";
-import SocialList from "./SocialList";
 import ArrowSvg from "../ArrowSvg/ArrowSvg";
 import MainTitle from "../MainTitle/MainTitle";
 import styles from "./styles.module.scss";
@@ -19,7 +18,7 @@ const About = () => {
           <Image
             className={styles.about__wrapper__img}
             src="/img/foto.jpeg"
-            alt="foto"
+            alt="Юсифли Нурага"
             width={300}
             height={300}
           />
@@ -39,32 +38,115 @@ const About = () => {
         </div>
 
         <div className={styles.about__inner}>
-          <h3 className={styles.about__title}>
-            <span className={styles.about__title__border}>
-              <span className={styles.about__title__border__arrow}>
-                <ArrowSvg />
-              </span>
-
-              <span className={styles.about__title__border__line} />
-            </span>
-          </h3>
-
           <div className={styles.about__text}>
-            <p>
-              Расположенный в Хартфорде, штат Коннектикут. В настоящее время я
-              работаю по совместительству Удаленным младшим веб-разработчиком
-              для Coolor, расположенного в Лас-Вегасе.
-            </p>
-            <p>
-              Я ищу, чтобы взять на себя больше работы и повысить свои навыки в
-              качестве веб-разработчика.
-            </p>
-          </div>
+            <section className={styles.about__text__sectionIntro}>
+              <p className={styles.about__text__p}>
+                Я Full-Stack разработчик с опытом создания веб-приложений и
+                пользовательских интерфейсов.
+                <br />
+                <span className={styles.about__title__border__line} />
+                <br />
+                Постоянно развиваюсь, изучаю современные технологии, читаю книги
+                и смотрю видео-курсы, которые помогают глубже понять принципы
+                работы технологий на реальных примерах.
+              </p>
+            </section>
 
-          {!isMobile1080 && <SocialList />}
+            <section className={styles.about__text__sectionBooks}>
+              <p className={styles.about__text__p}>
+                <span className={styles.about__text__emoji}>📚</span>
+                Книги, которые внесли вклад в мой профессиональный рост:
+                <br />
+                <span className={styles.about__title__border__line} />
+              </p>
+
+              <ul className={styles.about__text__ul}>
+                <li className={styles.about__text__li}>
+                  <span className={styles.about__text__highlight}>
+                    "Выразительный JavaScript"
+                  </span>
+                  – Marijn Haverbeke
+                </li>
+                <li className={styles.about__text__li}>
+                  <span className={styles.about__text__highlight}>
+                    "Совершенный код"
+                  </span>
+                  – Steve McConnell
+                </li>
+                <li className={styles.about__text__li}>
+                  <span className={styles.about__text__highlight}>
+                    "Чистый код"
+                  </span>
+                  – Robert C. Martin
+                </li>
+              </ul>
+            </section>
+
+            <section className={styles.about__text__sectionProjects}>
+              <p className={styles.about__text__p}>
+                <span className={styles.about__text__emoji}>💻</span>
+                Активно применяю знания на практике, разрабатывая лэндинги и
+                веб-приложения.
+                <br />
+                Среди моих проектов:
+                <span className={styles.about__title__border__line} />
+              </p>
+
+              <ul className={styles.about__text__ul}>
+                <li className={styles.about__text__li}>Интернет-магазины</li>
+                <li className={styles.about__text__li}>
+                  Сайты-визитки и рекламные страницы
+                </li>
+                <li className={styles.about__text__li}>
+                  Утилиты для медицинской фирмы
+                </li>
+                <li className={styles.about__text__li}>
+                  Аналог 1С для управления складом и учетной системой
+                </li>
+                <li className={styles.about__text__li}>
+                  Индивидуальные амбарные сайты для компаний
+                </li>
+              </ul>
+            </section>
+
+            <section className={styles.about__text__sectionExperience}>
+              <p className={styles.about__text__p}>
+                <span className={styles.about__text__emoji}>💡</span>
+                Опыт работы с функционалом:
+                <br />
+                <span className={styles.about__title__border__line} />
+              </p>
+
+              <ul className={styles.about__text__ul}>
+                <li className={styles.about__text__li}>
+                  Аутентификация пользователей через JWT token
+                </li>
+                <li className={styles.about__text__li}>
+                  Хеширование паролей и безопасное хранение данных
+                </li>
+                <li className={styles.about__text__li}>
+                  {`Логика учета материалов (приход, расход, создание, удаление)`}
+                </li>
+                <li className={styles.about__text__li}>
+                  {`Создание удобных UI/UX интерфейсов (интерактивные элементы, интеграция с другими сайтами)`}
+                </li>
+                <li className={styles.about__text__li}>
+                  {`Архив операций пользователя (например, удаленный товар остается в истории)`}
+                </li>
+              </ul>
+            </section>
+
+            <section className={styles.about__text__sectionConclusion}>
+              <p className={styles.about__text__p}>
+                Всегда стремлюсь писать чистый, поддерживаемый код, соблюдать
+                лучшие практики и исследовать новые технологии.
+                <br />
+                Открыт к интересным проектам и сложным задачам! 🚀
+              </p>
+            </section>
+          </div>
         </div>
       </div>
-      <div className="sub-container">{isMobile1080 && <SocialList />}</div>
     </section>
   );
 };

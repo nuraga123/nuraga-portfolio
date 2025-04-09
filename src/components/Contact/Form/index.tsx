@@ -1,36 +1,34 @@
 import { FormEvent, useState, useRef } from "react";
 import emailJS from "@emailjs/browser";
-import ContactInput from "./Input";
-import styles from "./styles.module.scss";
 import { toast } from "react-toastify";
 import { PropagateLoader } from "react-spinners";
+import ContactInput from "./Input";
+import styles from "./styles.module.scss";
 
 const Form = () => {
   const [disabled, setDisabled] = useState<boolean>(true);
   const [spinner, setSpinner] = useState<boolean>(false);
   const formRef = useRef<HTMLFormElement>(null);
 
-  const sendEmail = (event: FormEvent<HTMLFormElement>) => {
+  const sendEmail = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    setSpinner(true);
-
-    emailJS
-
-      .sendForm(
+    try {
+      setSpinner(true);
+      const result = await emailJS.sendForm(
         "service_r4cs4ki",
         "template_wbq8mmw",
         formRef.current as HTMLFormElement,
-        "HLw8oWldpeZ3uCvoa"
-      )
-      .then((res) => {
-        spinner;
-        toast.success(`данные отправлены ${res.text}`);
-      })
-      .catch((err) => {
-        toast.error("не удалось");
-        console.log(err);
-      });
+        "HLw8oWldpeZ3uCvo"
+      );
+
+      toast.success(`данные отправлены ${result.text}`);
+    } catch (error) {
+      toast.error("не удалось");
+      console.log(error);
+    } finally {
+      setSpinner(false);
+    }
   };
 
   return (
@@ -53,9 +51,9 @@ const Form = () => {
 
       <ContactInput
         text="Телефон "
-        placeholder="Укажите телефон *"
+        placeholder="Укажите телефон (не обязательно)"
         type="tel"
-        name="phone"
+        name="tel"
         required={false}
       />
 

@@ -1,7 +1,7 @@
 .about {
   padding-top: 140px;
   padding-bottom: 70px;
-  height: 100vh;
+  height: 100%;
   position: relative;
 
   @media all and (max-width: 1080px) {
@@ -47,8 +47,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 18vw;
-    height: 18vw;
     max-width: 300px;
     max-height: 300px;
     margin-right: 30px;
@@ -99,11 +97,9 @@
       }
     }
 
-    // Вложенный класс для бордера (SVG)
     &__border {
       position: absolute;
-      width: 110%;
-      height: 110%;
+      width: 111.5%;
       animation: rotate-border 30s linear infinite;
 
       .circle {
@@ -174,29 +170,164 @@
     }
   }
 
-  &__text p {
-    margin: 0;
-    max-width: 512px;
-    font-family: "Lato";
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 26px;
-    color: #f2f2f2;
+  &__text {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 25px;
+    max-width: 900px;
+    margin: 0 auto;
 
-    @media all and (max-width: 1080px) {
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.05);
+
+    &__sectionIntro {
+      border-radius: 5px;
+      background-color: #f0f8ffde;
+      border-left: 5px solid #00d1ff;
+      border-right: 5px solid #00d1ff;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+      p {
+        font-size: 18px;
+        color: #555;
+        font-weight: 500;
+      }
+    }
+
+    &__sectionBooks {
+      border-radius: 5px;
+      background-color: #fff3e0de;
+      border-left: 5px solid #ff9800;
+      border-right: 5px solid #ff9800;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+      p {
+        font-size: 18px;
+        color: #555;
+      }
+
+      ul {
+        margin-top: 10px;
+      }
+    }
+
+    &__sectionProjects {
+      border-radius: 5px;
+      background-color: #e3f2fdde;
+      border-left: 5px solid #1976d2;
+      border-right: 5px solid #1976d2;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+      p {
+        font-size: 18px;
+        color: #555;
+      }
+
+      ul {
+        margin-top: 10px;
+      }
+    }
+
+    &__sectionExperience {
+      border-radius: 5px;
+      background-color: #f1f8e9de;
+      border-left: 5px solid #4caf50;
+      border-right: 5px solid #4caf50;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+      p {
+        font-size: 18px;
+        color: #555;
+      }
+
+      ul {
+        margin-top: 10px;
+      }
+    }
+
+    &__sectionConclusion {
+      border-radius: 5px;
+      background-color: #fffde7de;
+      border-left: 5px solid #ffeb3b;
+      border-right: 5px solid #ffeb3b;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+      p {
+        font-size: 18px;
+        color: #555;
+        font-weight: 500;
+      }
+    }
+
+    &__p {
       font-size: 18px;
+      margin-bottom: 15px;
+      color: #444;
+      text-align: justify;
+      font-weight: 500;
+
+      span {
+        font-size: 24px;
+        margin-right: 5px;
+        color: #ff6b6b;
+      }
     }
 
-    @media all and (max-width: 800px) {
-      font-size: 16px;
-      line-height: 24px;
+    &__emoji {
+      font-size: 30px;
+      margin-right: 5px;
+      color: #ffd700;
     }
 
-    &:nth-child(2) {
-      margin-bottom: 54px;
+    &__ul {
+      margin-left: 20px;
+      padding-left: 0;
+      list-style: none;
+      background: #ffffff;
+      padding: 10px;
+      border-radius: 6px;
 
-      @media all and (max-width: 485px) {
-        margin-bottom: 13px;
+      &__li {
+        font-size: 18px;
+        margin-bottom: 10px;
+        position: relative;
+        transition: all 0.3s ease;
+        color: #555;
+
+        &:hover {
+          color: #00d1ff;
+          background: #e1f5fe;
+          border-radius: 4px;
+        }
+
+        &::before {
+          content: "•";
+          font-size: 18px;
+          color: #00d1ff;
+          position: absolute;
+          left: -20px;
+          top: 0;
+        }
+
+        span {
+          font-weight: bold;
+          color: #333;
+
+          &:not(:first-child) {
+            color: #555;
+          }
+        }
       }
     }
   }

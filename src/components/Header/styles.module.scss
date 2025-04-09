@@ -5,8 +5,9 @@
   width: 100%;
   padding: 28px 0 21px;
   z-index: 1;
-  background: rgba(21, 36, 72, 0.2);
+  background: #152448;
   backdrop-filter: blur(125px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
 
   @media all and (max-width: 800px) {
     padding: 24px 0;

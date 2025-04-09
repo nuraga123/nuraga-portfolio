@@ -1,5 +1,6 @@
 import MainTitle from "@/components/MainTitle/MainTitle";
-import SkillsItem from './SkillsItem';
+import SkillsItem from "./SkillsItem";
+import { skillsArray } from "./skillsArray";
 import styles from "./styles.module.scss";
 
 const Skills = () => {
@@ -10,26 +11,14 @@ const Skills = () => {
       </div>
       <div className="sub-container">
         <ul className={styles.skills__list}>
-          <SkillsItem
-            title="Веб-Разработка"
-            text="Javascript, Coffeescript, JAVA, Python, PHP, Go, Node.js, MongoDB, Redis, PostgreSQL, WebStorm."
-            iconClass={styles.skills__web}
-          />
-          <SkillsItem
-            title="UI/UX Дизайн"
-            text="Photoshop, Illustrator, Sketch, Axure, XMind, Прототипирование, Wireframing, Исследование Пользователей, Юзабилити-Тестирование"
-            iconClass={styles.skills__ux}
-          />
-          <SkillsItem
-            title="Разработка Frontend"
-            text="HTML, CSS, LESS, SASS, Bootstrap, Wordpress, Drupal, Phonegap / Cordova, Ionic, Foundation, Angular.js."
-            iconClass={styles.skills__front}
-          />
-          <SkillsItem
-            title="Консалтинг и SEO-Аудит"
-            text="Screaming Frog, Woorank, Raventools, Semrush, Moz, WebCEO, Google Analytics, ChartBeat, CrazyEgg."
-            iconClass={styles.skills__seo}
-          />
+          {skillsArray.map(({ text, title, iconClass }) => (
+            <SkillsItem
+              key={title}
+              text={text}
+              title={title}
+              iconClass={styles[iconClass]}
+            />
+          ))}
         </ul>
       </div>
     </section>
