@@ -16,7 +16,7 @@ const SocialList = () => {
             className={styles.social__list__item__link}
           >
             <span className={styles.social__list__item__link__icon}>
-              <Image src={src} alt={""} width={48} height={48} priority />
+              <Image src={src} alt={text} width={48} height={48} priority />
             </span>
 
             <span className={styles.social__list__item__link__text}>

@@ -1,12 +1,8 @@
 import Image from "next/image";
-import { useMediaQuery } from "@/hooks";
-import ArrowSvg from "../ArrowSvg/ArrowSvg";
 import MainTitle from "../MainTitle/MainTitle";
 import styles from "./styles.module.scss";
 
 const About = () => {
-  const isMobile1080 = useMediaQuery(1080);
-
   return (
     <section className={styles.about} id="about">
       <div className="container">
@@ -63,19 +59,19 @@ const About = () => {
               <ul className={styles.about__text__ul}>
                 <li className={styles.about__text__li}>
                   <span className={styles.about__text__highlight}>
-                    "Выразительный JavaScript"
+                    &quot;Выразительный JavaScript&quot;
                   </span>
                   – Marijn Haverbeke
                 </li>
                 <li className={styles.about__text__li}>
                   <span className={styles.about__text__highlight}>
-                    "Совершенный код"
+                    &quot;Совершенный код&quot;
                   </span>
                   – Steve McConnell
                 </li>
                 <li className={styles.about__text__li}>
                   <span className={styles.about__text__highlight}>
-                    "Чистый код"
+                    &quot;Чистый код&quot;
                   </span>
                   – Robert C. Martin
                 </li>

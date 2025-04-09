@@ -26,16 +26,16 @@ const Contact = () => {
           </div>
 
           <div className={styles.contact__right}>
+            <p className={styles.contact__text}>Ваш проект — моя забота.</p>
             <p className={styles.contact__text}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Doloribus, quas.
+              Гарантирую качество, сроки и внимание к деталям.
             </p>
-
             <p className={styles.contact__text}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Doloribus, quas.
+              Я рядом, чтобы реализовать вашу идею в цифровом виде.
             </p>
-
+            <p className={styles.contact__text}>
+              Просто напишите — обсудим всё в деталях
+            </p>
             <SocialList />
           </div>
         </div>

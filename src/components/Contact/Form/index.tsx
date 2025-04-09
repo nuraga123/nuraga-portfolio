@@ -28,6 +28,8 @@ const Form = () => {
       console.log(error);
     } finally {
       setSpinner(false);
+      formRef.current?.reset();
+      setDisabled(true);
     }
   };
 

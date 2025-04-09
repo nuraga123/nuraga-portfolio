@@ -23,4 +23,10 @@ export const socialLinks = [
     link: "https://www.linkedin.com/in/nuraga-yusifli-3b1538339/",
     target: "_blank",
   },
+  {
+    text: "github.com/nuraga123",
+    src: "/img/github.svg",
+    link: "https://github.com/nuraga123?tab=repositories",
+    target: "_blank",
+  },
 ];

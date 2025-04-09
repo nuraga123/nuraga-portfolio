@@ -11,14 +11,16 @@ const Skills = () => {
       </div>
       <div className="sub-container">
         <ul className={styles.skills__list}>
-          {skillsArray.map(({ text, title, iconClass }) => (
-            <SkillsItem
-              key={title}
-              text={text}
-              title={title}
-              iconClass={styles[iconClass]}
-            />
-          ))}
+          {skillsArray.length > 0 &&
+            skillsArray.map(({ id, text, title, iconClass }) => (
+              <li key={id} className={styles.skills__item}>
+                <SkillsItem
+                  title={title}
+                  text={text}
+                  iconClass={styles[iconClass]}
+                />
+              </li>
+            ))}
         </ul>
       </div>
     </section>

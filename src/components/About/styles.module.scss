@@ -30,6 +30,9 @@
     @media all and (max-width: 800px) {
       padding-top: 6px;
       padding-bottom: 18px;
+
+      flex-direction: column;
+      align-items: center;
     }
 
     @media all and (max-width: 630px) {
@@ -67,39 +70,12 @@
       width: 100%;
       height: 100%;
       border-radius: 50%;
-
-      @media (max-width: 790px) {
-        height: 95%;
-      }
-
-      @media (max-width: 770px) {
-        height: 92.5%;
-      }
-
-      @media (max-width: 770px) {
-        height: 97%;
-      }
-
-      @media (max-width: 720px) {
-        height: 90%;
-      }
-
-      @media (max-width: 700px) {
-        height: 85%;
-      }
-
-      @media (max-width: 650px) {
-        height: 82.5%;
-      }
-
-      @media (max-width: 630px) {
-        height: 100%;
-      }
     }
 
     &__border {
       position: absolute;
-      width: 111.5%;
+      width: 112.5%;
+      height: 112.5%;
       animation: rotate-border 30s linear infinite;
 
       .circle {
@@ -177,7 +153,7 @@
     padding: 25px;
     max-width: 900px;
     margin: 0 auto;
-
+    text-align: left;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.05);
 
