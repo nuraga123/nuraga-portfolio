@@ -2,7 +2,7 @@ import { Link } from "react-scroll";
 import { ReactTyped } from "react-typed";
 import { useState } from "react";
 import Image from "next/image";
-import { useMediaQuery } from "@/hooks";
+import { useMediaQuery } from "@/hooks/useWindowWidth";
 import styles from "./styles.module.scss";
 
 const Hero = () => {

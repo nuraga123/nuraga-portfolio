@@ -5,7 +5,7 @@ import { hiddenPortfolioItemsArray, portfolioItems } from "./Contents";
 import PortfolioTabContent from "./Content";
 import PortfolioTabControl from "./Control";
 import PortfolioSlider from "./Slider/Slider";
-import { useMediaQuery } from "@/hooks";
+import { useMediaQuery } from "@/hooks/useWindowWidth";
 
 import styles from "./styles.module.scss";
 

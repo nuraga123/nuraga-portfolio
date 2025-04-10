@@ -4,7 +4,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import PortfolioSliderItem from "./Item";
-import { useMediaQuery } from "@/hooks";
+import { useMediaQuery } from "@/hooks/useWindowWidth";
 
 interface IPortfolioSlider {
   tabItems: {

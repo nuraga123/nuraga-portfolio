@@ -1,17 +1,21 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
 import Logo from "@/components/Logo/Logo";
-import { useMediaQuery } from "@/hooks";
+import { useMediaQuery } from "@/hooks/useWindowWidth";
 import styles from "./styles.module.scss";
 import stylesMenu from "./mobileMenu.module.scss";
+import LanguageSwitcher from "../LanguageSwitcher";
+import { useTranslate } from "@/hooks/useTranslate";
 
 const Header = () => {
+  const t = useTranslate();
   const isMobile = useMediaQuery(650);
   const [menuOpen, setMenuOpen] = useState(false);
   const spy = true;
   const smooth = true;
   const offset = 140;
   const duration = 500;
+
   const currentMenuItemClass = isMobile
     ? stylesMenu.menu__item
     : styles.header__nav__list__item;
@@ -28,7 +32,7 @@ const Header = () => {
     (document.querySelector("body") as HTMLBodyElement).classList.remove(
       "overflow-hidden"
     );
-    
+
     setMenuOpen(false);
   };
 
@@ -42,7 +46,8 @@ const Header = () => {
         {isMobile && (
           <button
             onClick={handleToggleMenu}
-            className={`${styles.burger_menu} ${menuOpen ? styles.open : ""}`}>
+            className={`${styles.burger_menu} ${menuOpen ? styles.open : ""}`}
+          >
             <span />
             <span />
             <span />
@@ -52,11 +57,13 @@ const Header = () => {
         <nav
           className={`${isMobile ? stylesMenu.menu : styles.header__nav} ${
             menuOpen ? stylesMenu.open : ""
-          }`}>
+          }`}
+        >
           <ul
             className={`${
               isMobile ? styles.list_reset : styles.header__nav__list
-            }`}>
+            }`}
+          >
             <li className={currentMenuItemClass}>
               <Link
                 href="/"
@@ -66,8 +73,9 @@ const Header = () => {
                 offset={offset}
                 duration={duration}
                 className={styles.header__nav__list__item__link}
-                onClick={closeMenu}>
-                Обо мне
+                onClick={closeMenu}
+              >
+                {t("about")}
               </Link>
             </li>
             <li className={currentMenuItemClass}>
@@ -79,8 +87,9 @@ const Header = () => {
                 offset={offset}
                 duration={duration}
                 className={styles.header__nav__list__item__link}
-                onClick={closeMenu}>
-                Навыки
+                onClick={closeMenu}
+              >
+                {t("skills")}
               </Link>
             </li>
             <li className={currentMenuItemClass}>
@@ -92,8 +101,9 @@ const Header = () => {
                 offset={offset}
                 duration={duration}
                 className={styles.header__nav__list__item__link}
-                onClick={closeMenu}>
-                Портфолио
+                onClick={closeMenu}
+              >
+                {t("portfolio")}
               </Link>
             </li>
             <li className={currentMenuItemClass}>
@@ -105,12 +115,15 @@ const Header = () => {
                 offset={offset}
                 duration={duration}
                 className={styles.header__nav__list__item__link}
-                onClick={closeMenu}>
-                Обратная связь
+                onClick={closeMenu}
+              >
+                {t("contact")}
               </Link>
             </li>
           </ul>
         </nav>
+
+        <LanguageSwitcher />
       </div>
     </header>
   );

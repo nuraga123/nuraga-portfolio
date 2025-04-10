@@ -1,4 +1,5 @@
-import { useMediaQuery } from "../../hooks/index";
+import { useMediaQuery } from "@/hooks/useWindowWidth";
+
 const ArrowSvg = () => {
   const isMobile = useMediaQuery(800);
   const currentWidth = isMobile ? 54 : 80;
