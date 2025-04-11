@@ -22,17 +22,33 @@
   }
 
   &__item {
-    text-align: center;
+    text-align: end;
     border-bottom: 1px solid #fff;
+    padding: 10px 0;
+    width: 100%;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background-color: #00b4ff;
+    }
+
+    &:last-child:hover {
+      background-color: transparent;
+    }
 
     & a {
       position: relative;
       color: #fff;
       text-decoration: none;
-      font-size: 3em;
+      font-size: 2em;
       padding: 5px 20px;
-      display: inline-flex;
+      display: flex;
+      justify-content: flex-end;
       font-weight: 700;
+      width: 100%;
     }
   }
 }

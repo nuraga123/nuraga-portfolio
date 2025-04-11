@@ -4,11 +4,13 @@ import Logo from "@/components/Logo/Logo";
 import { useMediaQuery } from "@/hooks/useWindowWidth";
 import styles from "./styles.module.scss";
 import stylesMenu from "./mobileMenu.module.scss";
-import LanguageSwitcher from "../LanguageSwitcher";
-import { useTranslate } from "@/hooks/useTranslate";
+import { observer } from "mobx-react-lite";
+import { useTranslation } from "@/hooks/useTranslation";
+import SwitchLang from "../SwitchLang";
 
-const Header = () => {
-  const t = useTranslate();
+const Header = observer(() => {
+  const t = useTranslation();
+
   const isMobile = useMediaQuery(650);
   const [menuOpen, setMenuOpen] = useState(false);
   const spy = true;
@@ -75,7 +77,7 @@ const Header = () => {
                 className={styles.header__nav__list__item__link}
                 onClick={closeMenu}
               >
-                {t("about")}
+                {t.about}
               </Link>
             </li>
             <li className={currentMenuItemClass}>
@@ -89,7 +91,7 @@ const Header = () => {
                 className={styles.header__nav__list__item__link}
                 onClick={closeMenu}
               >
-                {t("skills")}
+                {t.skills}
               </Link>
             </li>
             <li className={currentMenuItemClass}>
@@ -103,7 +105,7 @@ const Header = () => {
                 className={styles.header__nav__list__item__link}
                 onClick={closeMenu}
               >
-                {t("portfolio")}
+                {t.portfolio}
               </Link>
             </li>
             <li className={currentMenuItemClass}>
@@ -117,16 +119,21 @@ const Header = () => {
                 className={styles.header__nav__list__item__link}
                 onClick={closeMenu}
               >
-                {t("contact")}
+                {t.contact}
               </Link>
             </li>
+            {isMobile && (
+              <li className={currentMenuItemClass}>
+                <SwitchLang />
+              </li>
+            )}
           </ul>
         </nav>
 
-        <LanguageSwitcher />
+        {!isMobile && <SwitchLang />}
       </div>
     </header>
   );
-};
+});
 
 export default Header;

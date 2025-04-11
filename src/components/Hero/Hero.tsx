@@ -3,9 +3,13 @@ import { ReactTyped } from "react-typed";
 import { useState } from "react";
 import Image from "next/image";
 import { useMediaQuery } from "@/hooks/useWindowWidth";
+import { useTranslation } from "@/hooks/useTranslation";
 import styles from "./styles.module.scss";
+import { observer } from "mobx-react-lite";
 
-const Hero = () => {
+const Hero = observer(() => {
+  const t = useTranslation();
+
   const isMobile650 = useMediaQuery(650);
   const isMobile485 = useMediaQuery(485);
 
@@ -34,7 +38,7 @@ const Hero = () => {
             />
           </h1>
           <div className={styles.hero__inner__wrapper}>
-            <h3 className={styles.hero__name}>Nuraga Yusifli</h3>
+            <h3 className={styles.hero__name}>{t.heroName}</h3>
             <Image
               src={"/img/programmer.png"}
               alt="programmer"
@@ -44,11 +48,8 @@ const Hero = () => {
             />
           </div>
           <div className={styles.hero__description}>
-            <p>Вы работаете над чем-то великим?</p>
-            <p>
-              Я с удовольствием помогу вам в этом! Напишите мне письмо и мы
-              начнем проект прямо сейчас!
-            </p>
+            <p>{t.heroDescription1}</p>
+            <p>{t.heroDescription2}</p>
           </div>
           <Link
             to="contact"
@@ -58,7 +59,7 @@ const Hero = () => {
             duration={500}
             className={styles.hero__btn}
           >
-            Связаться с разработчиком
+            {t.heroBtn}
           </Link>
           {!isMobile650 && (
             <Link
@@ -74,6 +75,6 @@ const Hero = () => {
       </div>
     </section>
   );
-};
+});
 
 export default Hero;

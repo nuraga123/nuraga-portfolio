@@ -1,12 +1,16 @@
 import Image from "next/image";
+import { observer } from "mobx-react-lite";
 import MainTitle from "../MainTitle/MainTitle";
+import { useTranslation } from "@/hooks/useTranslation";
 import styles from "./styles.module.scss";
 
-const About = () => {
+const About = observer(() => {
+  const t = useTranslation();
+
   return (
     <section className={styles.about} id="about">
       <div className="container">
-        <MainTitle text="Обо мне" />
+        <MainTitle text={t.aboutTitle} />
       </div>
 
       <div className={`sub-container ${styles.about__sub_container}`}>
@@ -37,11 +41,13 @@ const About = () => {
           <div className={styles.about__text}>
             <section className={styles.about__text__sectionIntro}>
               <p className={styles.about__text__p}>
+                {t.aboutIntroTitle}
                 Я Full-Stack разработчик с опытом создания веб-приложений и
                 пользовательских интерфейсов.
                 <br />
                 <span className={styles.about__title__border__line} />
                 <br />
+                {t.aboutIntro}
                 Постоянно развиваюсь, изучаю современные технологии, читаю книги
                 и смотрю видео-курсы, которые помогают глубже понять принципы
                 работы технологий на реальных примерах.
@@ -145,6 +151,6 @@ const About = () => {
       </div>
     </section>
   );
-};
+});
 
 export default About;
