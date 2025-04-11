@@ -23,8 +23,14 @@ const SwitchLang = observer(() => {
 
   const handleSelect = (langCode: Language) => {
     languageStore.setLanguage(langCode);
+    localStorage.setItem("language", langCode);
     setOpen(false);
   };
+
+  // 🔥 Загрузка языка из localStorage
+  useEffect(() => {
+    languageStore.initLanguageFromLocalStorage();
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {

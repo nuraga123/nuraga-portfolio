@@ -6,10 +6,17 @@ import PortfolioTabContent from "./Content";
 import PortfolioTabControl from "./Control";
 import PortfolioSlider from "./Slider/Slider";
 import { useMediaQuery } from "@/hooks/useWindowWidth";
+import { useTranslation } from "@/hooks/useTranslation";
 
 import styles from "./styles.module.scss";
+import { observer } from "mobx-react-lite";
 
-const Portfolio = () => {
+const Portfolio = observer(() => {
+  const t = useTranslation();
+  const { portfolio } = t;
+  const { portfolioTitle, portfolioTabControlsTitles, showMore, collapse } =
+    portfolio;
+
   const isMobile = useMediaQuery(1080);
 
   const [portfolioTabId, setPortfolioTabId] = useState<number>(1);
@@ -23,26 +30,26 @@ const Portfolio = () => {
   const portfolioTabControls = [
     {
       id: 1,
-      title: "Веб-сайты",
+      title: portfolioTabControlsTitles[0],
     },
     {
       id: 2,
-      title: "UI/UX дизайн",
+      title: portfolioTabControlsTitles[1],
     },
     {
       id: 3,
-      title: "Внешний интерфейс",
+      title: portfolioTabControlsTitles[2],
     },
     {
       id: 4,
-      title: "Все проекты",
+      title: portfolioTabControlsTitles[3],
     },
   ];
 
   return (
     <section className={styles.portfolio} id="portfolio">
       <div className="container">
-        <MainTitle text="портфолио" />
+        <MainTitle text={portfolioTitle} />
       </div>
       <div className="sub-container">
         <div className={styles.portfolio__inner}>
@@ -78,7 +85,7 @@ const Portfolio = () => {
               onClick={toggleHiddenPortfolioItems}
             >
               <span className={styles.portfolio__more__text}>
-                {hiddenPortfolioItems ? "Свернуть" : "Показать еще проекты"}
+                {hiddenPortfolioItems ? collapse : showMore}
               </span>
               <span className={styles.portfolio__more__border} />
             </button>
@@ -97,6 +104,6 @@ const Portfolio = () => {
       )}
     </section>
   );
-};
+});
 
 export default Portfolio;

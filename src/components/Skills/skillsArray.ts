@@ -1,7 +1,7 @@
 export const skillsArray = [
   {
     id: 1,
-    title: "Веб-Разработка",
+    title: "Frontend",
     text: [
       "HTML5",
       "CSS",
@@ -21,13 +21,13 @@ export const skillsArray = [
   },
   {
     id: 2,
-    title: "Backend-Разработка",
+    title: "Backend",
     text: ["NodeJS", "ExpressJS", "NestJS", "JWT", "REST API", "Swagger"],
     iconClass: "skills__web",
   },
   {
     id: 3,
-    title: "Базы данных",
+    title: "Databases",
     text: [
       "MongoDB",
       "MariaDB",
@@ -39,14 +39,5 @@ export const skillsArray = [
       "Sequelize",
     ],
     iconClass: "skills__front",
-  },
-  {
-    id: 4,
-    title: "Алгоритмы и структуры",
-    text: [
-      "Знание основных алгоритмов (сортировка, поиск, динамическое программирование)",
-      "Структур данных (массивы, списки, деревья, графы, хеш-таблицы), их применение для решения различных задач",
-    ],
-    iconClass: "skills__seo",
   },
 ];

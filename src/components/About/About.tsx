@@ -6,11 +6,24 @@ import styles from "./styles.module.scss";
 
 const About = observer(() => {
   const t = useTranslation();
+  const { about } = t;
+  const {
+    aboutTitle,
+    aboutBooksList,
+    aboutProjectsList,
+    aboutExperienceList,
+    aboutConclusion,
+    aboutBooksTitle,
+    aboutExperienceTitle,
+    aboutIntro,
+    aboutIntroTitle,
+    aboutProjectsTitle,
+  } = about;
 
   return (
     <section className={styles.about} id="about">
       <div className="container">
-        <MainTitle text={t.aboutTitle} />
+        <MainTitle text={aboutTitle} />
       </div>
 
       <div className={`sub-container ${styles.about__sub_container}`}>
@@ -41,109 +54,74 @@ const About = observer(() => {
           <div className={styles.about__text}>
             <section className={styles.about__text__sectionIntro}>
               <p className={styles.about__text__p}>
-                {t.aboutIntroTitle}
-                Я Full-Stack разработчик с опытом создания веб-приложений и
-                пользовательских интерфейсов.
+                {aboutIntroTitle}
                 <br />
                 <span className={styles.about__title__border__line} />
                 <br />
-                {t.aboutIntro}
-                Постоянно развиваюсь, изучаю современные технологии, читаю книги
-                и смотрю видео-курсы, которые помогают глубже понять принципы
-                работы технологий на реальных примерах.
+                {aboutIntro}
               </p>
             </section>
 
             <section className={styles.about__text__sectionBooks}>
               <p className={styles.about__text__p}>
                 <span className={styles.about__text__emoji}>📚</span>
-                Книги, которые внесли вклад в мой профессиональный рост:
+                {aboutBooksTitle}
                 <br />
                 <span className={styles.about__title__border__line} />
               </p>
 
               <ul className={styles.about__text__ul}>
-                <li className={styles.about__text__li}>
-                  <span className={styles.about__text__highlight}>
-                    &quot;Выразительный JavaScript&quot;
-                  </span>
-                  – Marijn Haverbeke
-                </li>
-                <li className={styles.about__text__li}>
-                  <span className={styles.about__text__highlight}>
-                    &quot;Совершенный код&quot;
-                  </span>
-                  – Steve McConnell
-                </li>
-                <li className={styles.about__text__li}>
-                  <span className={styles.about__text__highlight}>
-                    &quot;Чистый код&quot;
-                  </span>
-                  – Robert C. Martin
-                </li>
+                {aboutBooksList.map((text) => (
+                  <li className={styles.about__text__li} key={text}>
+                    <span className={styles.about__text__highlight}>
+                      {text}
+                    </span>
+                  </li>
+                ))}
               </ul>
             </section>
 
             <section className={styles.about__text__sectionProjects}>
               <p className={styles.about__text__p}>
                 <span className={styles.about__text__emoji}>💻</span>
-                Активно применяю знания на практике, разрабатывая лэндинги и
-                веб-приложения.
+                {aboutProjectsTitle}
                 <br />
-                Среди моих проектов:
                 <span className={styles.about__title__border__line} />
               </p>
 
               <ul className={styles.about__text__ul}>
-                <li className={styles.about__text__li}>Интернет-магазины</li>
-                <li className={styles.about__text__li}>
-                  Сайты-визитки и рекламные страницы
-                </li>
-                <li className={styles.about__text__li}>
-                  Утилиты для медицинской фирмы
-                </li>
-                <li className={styles.about__text__li}>
-                  Аналог 1С для управления складом и учетной системой
-                </li>
-                <li className={styles.about__text__li}>
-                  Индивидуальные амбарные сайты для компаний
-                </li>
+                {aboutProjectsList.map((text) => (
+                  <li className={styles.about__text__li} key={text}>
+                    {text}
+                  </li>
+                ))}
               </ul>
             </section>
 
             <section className={styles.about__text__sectionExperience}>
               <p className={styles.about__text__p}>
                 <span className={styles.about__text__emoji}>💡</span>
-                Опыт работы с функционалом:
+                {aboutExperienceTitle}
                 <br />
                 <span className={styles.about__title__border__line} />
               </p>
 
               <ul className={styles.about__text__ul}>
-                <li className={styles.about__text__li}>
-                  Аутентификация пользователей через JWT token
-                </li>
-                <li className={styles.about__text__li}>
-                  Хеширование паролей и безопасное хранение данных
-                </li>
-                <li className={styles.about__text__li}>
-                  {`Логика учета материалов (приход, расход, создание, удаление)`}
-                </li>
-                <li className={styles.about__text__li}>
-                  {`Создание удобных UI/UX интерфейсов (интерактивные элементы, интеграция с другими сайтами)`}
-                </li>
-                <li className={styles.about__text__li}>
-                  {`Архив операций пользователя (например, удаленный товар остается в истории)`}
-                </li>
+                {aboutExperienceList.map((text) => (
+                  <li className={styles.about__text__li} key={text}>
+                    {text}
+                  </li>
+                ))}
               </ul>
             </section>
 
             <section className={styles.about__text__sectionConclusion}>
               <p className={styles.about__text__p}>
-                Всегда стремлюсь писать чистый, поддерживаемый код, соблюдать
-                лучшие практики и исследовать новые технологии.
+                {aboutConclusion.split(".")[0]}
+                {"."}
                 <br />
-                Открыт к интересным проектам и сложным задачам! 🚀
+                {aboutConclusion.split(".")[1]}
+                <span className={styles.about__title__border__line} />
               </p>
             </section>
           </div>

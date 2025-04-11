@@ -9,6 +9,8 @@ import { observer } from "mobx-react-lite";
 
 const Hero = observer(() => {
   const t = useTranslation();
+  const { hero } = t;
+  const { heroName, heroDescription1, heroDescription2, heroBtn } = hero;
 
   const isMobile650 = useMediaQuery(650);
   const isMobile485 = useMediaQuery(485);
@@ -38,7 +40,7 @@ const Hero = observer(() => {
             />
           </h1>
           <div className={styles.hero__inner__wrapper}>
-            <h3 className={styles.hero__name}>{t.heroName}</h3>
+            <h3 className={styles.hero__name}>{heroName}</h3>
             <Image
               src={"/img/programmer.png"}
               alt="programmer"
@@ -48,8 +50,8 @@ const Hero = observer(() => {
             />
           </div>
           <div className={styles.hero__description}>
-            <p>{t.heroDescription1}</p>
-            <p>{t.heroDescription2}</p>
+            <p>{heroDescription1}</p>
+            <p>{heroDescription2}</p>
           </div>
           <Link
             to="contact"
@@ -59,7 +61,7 @@ const Hero = observer(() => {
             duration={500}
             className={styles.hero__btn}
           >
-            {t.heroBtn}
+            {heroBtn}
           </Link>
           {!isMobile650 && (
             <Link

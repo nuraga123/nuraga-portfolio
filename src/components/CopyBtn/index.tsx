@@ -9,7 +9,7 @@ export const CopyBtn = ({ text }: { text: string }) => {
   const handleCopy = () => {
     navigator.clipboard.writeText(text);
     setIsCopy(true);
-    toast.success(`copy: ${text}`);
+    toast(text);
 
     setTimeout(() => {
       setIsCopy(false);

@@ -1,21 +1,29 @@
-import SocialList from "../About/SocialList";
+import { observer } from "mobx-react-lite";
+import SocialList from "../SocialList";
 import ArrowSvg from "../ArrowSvg/ArrowSvg";
 import MainTitle from "../MainTitle/MainTitle";
 import Form from "./Form";
+import { useTranslation } from "@/hooks/useTranslation";
 import styles from "./styles.module.scss";
 
-const Contact = () => {
+const Contact = observer(() => {
+  const t = useTranslation();
+  const { contact } = t;
+  const { contactTitle, contactSmallTitle, contactTexts } = contact;
+
   return (
     <section className={styles.contact} id="contact">
       <div className="container">
-        <MainTitle text="Обратная связь" />
+        <MainTitle text={contactTitle} />
       </div>
 
       <div className="sub-container">
         <div className={styles.contact__inner}>
           <div className={styles.contact__left}>
             <h3 className={styles.contact__title}>
-              <span className={styles.contact__title__text}>Напиши нам</span>
+              <span className={styles.contact__title__text}>
+                {contactSmallTitle}
+              </span>
               <span className={styles.contact__title__arrow}>
                 <ArrowSvg />
               </span>
@@ -26,22 +34,17 @@ const Contact = () => {
           </div>
 
           <div className={styles.contact__right}>
-            <p className={styles.contact__text}>Ваш проект — моя забота.</p>
-            <p className={styles.contact__text}>
-              Гарантирую качество, сроки и внимание к деталям.
-            </p>
-            <p className={styles.contact__text}>
-              Я рядом, чтобы реализовать вашу идею в цифровом виде.
-            </p>
-            <p className={styles.contact__text}>
-              Просто напишите — обсудим всё в деталях
-            </p>
+            {contactTexts.map((text, index) => (
+              <p className={styles.contact__text} key={index}>
+                {text}
+              </p>
+            ))}
             <SocialList />
           </div>
         </div>
       </div>
     </section>
   );
-};
+});
 
 export default Contact;

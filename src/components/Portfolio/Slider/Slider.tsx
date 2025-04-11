@@ -3,8 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import PortfolioSliderItem from "./Item";
 import { useMediaQuery } from "@/hooks/useWindowWidth";
+import { useTranslation } from "@/hooks/useTranslation";
+import PortfolioSliderItem from "./Item";
 
 interface IPortfolioSlider {
   tabItems: {
@@ -16,6 +17,11 @@ interface IPortfolioSlider {
 }
 
 const PortfolioSlider = ({ tabItems }: IPortfolioSlider) => {
+  const t = useTranslation();
+  const { portfolio } = t;
+  const { digitalStore, brizlyPlatform, transportService } =
+    portfolio.portfolioData;
+
   const isMobile800 = useMediaQuery(800);
   const isMobile485 = useMediaQuery(485);
 
@@ -41,7 +47,13 @@ const PortfolioSlider = ({ tabItems }: IPortfolioSlider) => {
         {tabItems.map((item) => (
           <SwiperSlide key={item.id}>
             <PortfolioSliderItem
-              title={item.title}
+              title={
+                item.title === "digitalStore"
+                  ? digitalStore
+                  : item.title === "brizlyPlatform"
+                  ? brizlyPlatform
+                  : transportService
+              }
               imgSrc={item.img}
               link={item.link}
             />

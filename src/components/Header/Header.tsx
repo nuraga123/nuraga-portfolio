@@ -10,8 +10,10 @@ import SwitchLang from "../SwitchLang";
 
 const Header = observer(() => {
   const t = useTranslation();
+  const { header } = t;
+  const { about, skills, portfolio, contact } = header;
 
-  const isMobile = useMediaQuery(650);
+  const isMobile = useMediaQuery(670);
   const [menuOpen, setMenuOpen] = useState(false);
   const spy = true;
   const smooth = true;
@@ -77,7 +79,7 @@ const Header = observer(() => {
                 className={styles.header__nav__list__item__link}
                 onClick={closeMenu}
               >
-                {t.about}
+                {about}
               </Link>
             </li>
             <li className={currentMenuItemClass}>
@@ -91,7 +93,7 @@ const Header = observer(() => {
                 className={styles.header__nav__list__item__link}
                 onClick={closeMenu}
               >
-                {t.skills}
+                {skills}
               </Link>
             </li>
             <li className={currentMenuItemClass}>
@@ -105,7 +107,7 @@ const Header = observer(() => {
                 className={styles.header__nav__list__item__link}
                 onClick={closeMenu}
               >
-                {t.portfolio}
+                {portfolio}
               </Link>
             </li>
             <li className={currentMenuItemClass}>
@@ -119,7 +121,7 @@ const Header = observer(() => {
                 className={styles.header__nav__list__item__link}
                 onClick={closeMenu}
               >
-                {t.contact}
+                {contact}
               </Link>
             </li>
             {isMobile && (

@@ -1,13 +1,20 @@
-import MainTitle from "@/components/MainTitle/MainTitle";
-import SkillsItem from "./SkillsItem";
+import { observer } from "mobx-react-lite";
 import { skillsArray } from "./skillsArray";
+import MainTitle from "@/components/MainTitle/MainTitle";
+import { useTranslation } from "@/hooks/useTranslation";
+import SkillsItem from "./SkillsItem";
 import styles from "./styles.module.scss";
 
-const Skills = () => {
+const Skills = observer(() => {
+  const t = useTranslation();
+  const { skills } = t;
+  const { skillsTitle, algorithmsTitle, algorithmsText1, algorithmsText2 } =
+    skills;
+
   return (
     <section className={styles.skills} id="skills">
       <div className="container">
-        <MainTitle text="навыки" />
+        <MainTitle text={skillsTitle} />
       </div>
       <div className="sub-container">
         <ul className={styles.skills__list}>
@@ -21,10 +28,17 @@ const Skills = () => {
                 />
               </li>
             ))}
+          <li className={styles.skills__item}>
+            <SkillsItem
+              title={algorithmsTitle}
+              text={[algorithmsText1, algorithmsText2]}
+              iconClass={styles.skills__seo}
+            />
+          </li>
         </ul>
       </div>
     </section>
   );
-};
+});
 
 export default Skills;
