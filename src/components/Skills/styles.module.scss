@@ -16,24 +16,17 @@
 
   &__list {
     list-style-type: none;
-    margin: 0;
+    margin: 0 0 40px 0;
     padding: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 32px;
-    grid-row-gap: 25px;
+    grid-row-gap: 40px;
 
-    @media all and (max-width: 1080px) {
-      grid-column-gap: 24px;
-    }
-
-    @media all and (max-width: 800px) {
-      grid-column-gap: 18px;
-    }
-
-    @media all and (max-width: 620px) {
-      display: block;
+    @media all and (max-width: 680px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
   }
 

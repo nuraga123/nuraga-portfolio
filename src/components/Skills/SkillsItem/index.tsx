@@ -16,7 +16,10 @@ const SkillsItem = ({ text, title, iconClass }: ISkillsItem) => {
       <ul className={styles.skills__item__list}>
         {text.length > 0 &&
           text.map((item, index) => (
-            <li className={styles.skills__text} key={index}>
+            <li
+              className={styles.skills__text}
+              key={index}
+            >
               {item}
             </li>
           ))}

@@ -8,7 +8,7 @@ import Contact from "@/components/Contact/Contact";
 
 export default function Home() {
   return (
-    <>
+    <div style={{ overflow: "hidden" }}>
       <Head>
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -23,14 +23,17 @@ export default function Home() {
         <About />
         <Skills />
         <Portfolio />
-        <Contact />
       </main>
+
+      <footer>
+        <Contact />
+      </footer>
 
       <div className="background-animation">
         <div id="ball-one"></div>
         <div id="ball-two"></div>
         <div id="ball-three"></div>
       </div>
-    </>
+    </div>
   );
 }

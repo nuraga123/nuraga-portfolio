@@ -1,89 +1,4 @@
-export interface ILocalesHeader {
-  about: string;
-  skills: string;
-  portfolio: string;
-  contact: string;
-}
-
-export interface ILocalesHero {
-  heroName: string;
-  heroDescription1: string;
-  heroDescription2: string;
-  heroBtn: string;
-}
-
-export interface ILocalesAbout {
-  aboutTitle: string;
-  aboutIntroTitle: string;
-  aboutIntro: string;
-  aboutBooksTitle: string;
-  aboutBooksList: string[];
-  aboutProjectsTitle: string;
-  aboutProjectsList: string[];
-  aboutExperienceTitle: string;
-  aboutExperienceList: string[];
-  aboutConclusion: string;
-}
-
-export interface ILocalesSkills {
-  skillsTitle: string;
-  algorithmsTitle: string;
-  algorithmsText1: string;
-  algorithmsText2: string;
-}
-
-export interface ILocalesPortfolio {
-  portfolioTitle: string;
-  portfolioTabControlsTitles: string[];
-  portfolioData: {
-    digitalStore: string;
-    brizlyPlatform: string;
-    transportService: string;
-  };
-  showMore: string;
-  collapse: string;
-}
-
-export interface ILocalesContact {
-  contactTitle: string;
-  contactSmallTitle: string;
-  contactTexts: string[];
-  placeholderStartText: string;
-  formSuccessText: string;
-  formErrorText: string;
-  formNameText: string;
-  formEmailText: string;
-  formTelText: string;
-  formMessageText: string;
-  formCheckboxText: string;
-  formBtnText: string;
-}
-export interface ILocales {
-  RU: {
-    header: ILocalesHeader;
-    hero: ILocalesHero;
-    about: ILocalesAbout;
-    skills: ILocalesSkills;
-    portfolio: ILocalesPortfolio;
-    contact: ILocalesContact;
-  };
-  EN: {
-    header: ILocalesHeader;
-    hero: ILocalesHero;
-    about: ILocalesAbout;
-    skills: ILocalesSkills;
-    portfolio: ILocalesPortfolio;
-    contact: ILocalesContact;
-  };
-  AZ: {
-    header: ILocalesHeader;
-    hero: ILocalesHero;
-    about: ILocalesAbout;
-    skills: ILocalesSkills;
-    portfolio: ILocalesPortfolio;
-    contact: ILocalesContact;
-  };
-}
+import { ILocales } from "./types";
 
 export const locales: ILocales = {
   RU: {
@@ -360,3 +275,5 @@ export const locales: ILocales = {
 } as const;
 
 export type Language = keyof typeof locales;
+
+locales.AZ.contact.contactTexts;

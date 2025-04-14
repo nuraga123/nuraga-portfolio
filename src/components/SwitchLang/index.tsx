@@ -48,7 +48,7 @@ const SwitchLang = observer(() => {
   return (
     <div className={styles.langSwitcher} ref={ref}>
       <button onClick={toggleOpen} className={styles.current}>
-        <span className={styles.label}>{currentLangData?.label}</span>
+        <span className={styles.label}>{currentLangData?.code}</span>
       </button>
 
       <div className={`${styles.dropdown} ${open ? styles.open : ""}`}>

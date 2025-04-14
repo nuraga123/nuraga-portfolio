@@ -28,14 +28,14 @@ const Skills = observer(() => {
                 />
               </li>
             ))}
-          <li className={styles.skills__item}>
-            <SkillsItem
-              title={algorithmsTitle}
-              text={[algorithmsText1, algorithmsText2]}
-              iconClass={styles.skills__seo}
-            />
-          </li>
         </ul>
+        <div className={styles.skills__item}>
+          <SkillsItem
+            title={algorithmsTitle}
+            text={[algorithmsText1, algorithmsText2]}
+            iconClass={styles.skills__seo}
+          />
+        </div>
       </div>
     </section>
   );
