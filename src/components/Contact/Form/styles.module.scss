@@ -29,6 +29,10 @@
       border: 2px solid rgba(255, 255, 255, 0.15);
       background-color: transparent;
 
+      @media all and (max-width: 675px) {
+        font-size: 16px;
+      }
+
       &::placeholder {
         font-family: "Lato";
         font-style: normal;
@@ -36,6 +40,10 @@
         font-size: 22px;
         line-height: 128.9%;
         color: #b7bfd1;
+
+        @media all and (max-width: 675px) {
+          font-size: 16px;
+        }
       }
     }
   }
@@ -54,11 +62,13 @@
     font-family: "Raleway";
     font-weight: 600;
     font-size: 22px;
+
     background: radial-gradient(
       142.65% 2282.99% at 100% -31.65%,
       #00c9fc 0%,
       #1a46ef 56.36%
     );
+
     border-radius: 4px;
     color: #f2f2f2;
 

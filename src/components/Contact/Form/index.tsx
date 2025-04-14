@@ -1,11 +1,11 @@
 import { FormEvent, useState, useRef } from "react";
-import emailJS from "@emailjs/browser";
 import { toast } from "react-toastify";
 import { PropagateLoader } from "react-spinners";
+import { observer } from "mobx-react-lite";
+import emailJS from "@emailjs/browser";
+import { useTranslation } from "@/hooks/useTranslation";
 import ContactInput from "./Input";
 import styles from "./styles.module.scss";
-import { observer } from "mobx-react-lite";
-import { useTranslation } from "@/hooks/useTranslation";
 
 const Form = observer(() => {
   const t = useTranslation();
@@ -81,6 +81,17 @@ const Form = observer(() => {
         name="message"
         required={true}
       />
+
+      <label className={styles.form__label}>
+        <span className={styles.form__label__text}>{formMessageText}</span>
+        <textarea
+          className={styles.form__label__input}
+          name={"message"}
+          placeholder={placeholderStartText + " " + formMessageText}
+          required={true}
+          rows={2}
+        />
+      </label>
 
       <label className={styles.form__checkbox}>
         <input
