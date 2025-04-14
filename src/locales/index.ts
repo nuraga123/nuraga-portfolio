@@ -275,5 +275,3 @@ export const locales: ILocales = {
 } as const;
 
 export type Language = keyof typeof locales;
-
-locales.AZ.contact.contactTexts;
