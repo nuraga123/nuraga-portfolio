@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import ArrowSvg from "@/components/ArrowSvg/ArrowSvg";
+import ArrowSvg from "@/components/ArrowSvg";
 import styles from "../styles.module.scss";
 
 interface IPortfolioTabControl {

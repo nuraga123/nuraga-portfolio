@@ -117,8 +117,8 @@ const About = observer(() => {
 
             <section className={styles.about__text__sectionConclusion}>
               <p className={styles.about__text__p}>
-                {aboutConclusion.split(".")[0]}
-                {"."}
+                {`${aboutConclusion.split(".")[0]}. `}
+
                 <br />
                 {aboutConclusion.split(".")[1]}
                 <span className={styles.about__title__border__line} />

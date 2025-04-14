@@ -1,11 +1,11 @@
+import Image from "next/image";
 import { Link } from "react-scroll";
 import { ReactTyped } from "react-typed";
 import { useState } from "react";
-import Image from "next/image";
+import { observer } from "mobx-react-lite";
 import { useMediaQuery } from "@/hooks/useWindowWidth";
 import { useTranslation } from "@/hooks/useTranslation";
 import styles from "./styles.module.scss";
-import { observer } from "mobx-react-lite";
 
 const Hero = observer(() => {
   const t = useTranslation();
@@ -14,10 +14,6 @@ const Hero = observer(() => {
 
   const isMobile650 = useMediaQuery(650);
   const isMobile485 = useMediaQuery(485);
-
-  const [isTaping, setIsTaping] = useState(true);
-
-  setTimeout(() => setIsTaping(false), 10000);
 
   return (
     <section
@@ -32,11 +28,11 @@ const Hero = observer(() => {
         <div className={styles.hero__inner}>
           <h1 className={styles.hero__title}>
             <ReactTyped
-              strings={["Full - Stack Developer"]}
-              typeSpeed={200}
-              backSpeed={250}
-              loop={isTaping}
-              showCursor={false}
+              strings={["Full-Stack Developer"]}
+              typeSpeed={300}
+              backSpeed={150}
+              loop
+              showCursor={true}
             />
           </h1>
           <div className={styles.hero__inner__wrapper}>

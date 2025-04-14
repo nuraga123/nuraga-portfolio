@@ -201,7 +201,7 @@
 
   &__arrow {
     position: absolute;
-    bottom: 100px;
+    bottom: 150px;
     left: 50%;
     transform: translateX(-50%);
     width: 75px;
@@ -210,7 +210,7 @@
     background-image: url("/img/hero-arrow.svg");
     background-repeat: no-repeat;
     background-position: center center;
-    animation: bounde 2s ease-in-out 5;
+    animation: bounde 1.5s ease-in-out infinite;
     @media all and (max-width: 1080px) {
       bottom: 66px;
     }

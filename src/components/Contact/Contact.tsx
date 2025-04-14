@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite";
 import SocialList from "../SocialList";
-import ArrowSvg from "../ArrowSvg/ArrowSvg";
+import ArrowSvg from "../ArrowSvg";
 import MainTitle from "../MainTitle/MainTitle";
 import Form from "./Form";
 import { useTranslation } from "@/hooks/useTranslation";
