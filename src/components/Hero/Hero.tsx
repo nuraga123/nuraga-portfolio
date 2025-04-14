@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Link } from "react-scroll";
 import { ReactTyped } from "react-typed";
-import { useState } from "react";
 import { observer } from "mobx-react-lite";
 import { useMediaQuery } from "@/hooks/useWindowWidth";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -31,10 +30,11 @@ const Hero = observer(() => {
               strings={["Full-Stack Developer"]}
               typeSpeed={300}
               backSpeed={150}
-              loop
               showCursor={true}
+              loop
             />
           </h1>
+
           <div className={styles.hero__inner__wrapper}>
             <h3 className={styles.hero__name}>{heroName}</h3>
             <Image
@@ -45,10 +45,12 @@ const Hero = observer(() => {
               priority
             />
           </div>
+
           <div className={styles.hero__description}>
             <p>{heroDescription1}</p>
             <p>{heroDescription2}</p>
           </div>
+
           <Link
             to="contact"
             spy={true}
@@ -59,6 +61,7 @@ const Hero = observer(() => {
           >
             {heroBtn}
           </Link>
+
           {!isMobile650 && (
             <Link
               to="about"
