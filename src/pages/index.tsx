@@ -13,7 +13,58 @@ export default function Home() {
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/svg" sizes="32x32" href="/img/logo.svg" />
+
+        <title>Nuraga Yusifli | Fullstack Developer</title>
+        <meta
+          name="description"
+          content="Портфолио Nuraga Yusifli — опытного fullstack разработчика с фокусом на React, Next.js, TypeScript и современный UI."
+        />
+        <meta
+          name="keywords"
+          content="Nuraga Yusifli, fullstack developer, React, Next.js, TypeScript, portfolio"
+        />
+        <meta name="author" content="Nuraga Yusifli" />
+
+        <link rel="icon" type="image/svg+xml" href="/img/logo.svg" />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="Nuraga Yusifli | Fullstack Developer"
+        />
+        <meta
+          property="og:description"
+          content="Портфолио разработчика: React, Next.js, Node.js, TypeScript, SCSS. Современные веб-приложения и UI/UX дизайн."
+        />
+        <meta property="og:url" content="https://nuraga-portfolio.vercel.app" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://nuraga-portfolio.vercel.app/foto.jpeg"
+        />
+        <meta
+          name="twitter:image"
+          content="https://nuraga-portfolio.vercel.app/foto.jpeg"
+        />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Nuraga Yusifli | Fullstack Developer"
+        />
+        <meta
+          name="twitter:description"
+          content="Портфолио разработчика: React, Next.js, Node.js, TypeScript, SCSS. Современные веб-приложения и UI/UX дизайн."
+        />
+        <meta
+          property="og:image"
+          content="https://nuraga-portfolio.vercel.app/foto.jpeg"
+        />
+        <meta
+          name="twitter:image"
+          content="https://nuraga-portfolio.vercel.app/foto.jpeg"
+        />
       </Head>
 
       <Header />
