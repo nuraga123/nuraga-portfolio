@@ -3,6 +3,7 @@ interface ILocalesHeader {
   skills: string;
   portfolio: string;
   contact: string;
+  game: string;
 }
 
 interface ILocalesHero {
@@ -66,6 +67,7 @@ interface ILocalesItem {
   skills: ILocalesSkills;
   portfolio: ILocalesPortfolio;
   contact: ILocalesContact;
+  back: string;
 }
 
 export interface ILocales {

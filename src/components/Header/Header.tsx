@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
+import { useRouter } from "next/navigation";
 import Logo from "@/components/Logo/Logo";
 import { useMediaQuery } from "@/hooks/useWindowWidth";
 import styles from "./styles.module.scss";
@@ -9,9 +10,17 @@ import { useTranslation } from "@/hooks/useTranslation";
 import SwitchLang from "../SwitchLang";
 
 const Header = observer(() => {
+  const router = useRouter();
   const t = useTranslation();
   const { header } = t;
-  const { about, skills, portfolio, contact } = header;
+  const { about, skills, portfolio, contact, game } = header;
+
+  const navs = [
+    { id: 1, title: about, to: "about" },
+    { id: 2, title: skills, to: "skills" },
+    { id: 3, title: portfolio, to: "portfolio" },
+    { id: 4, title: contact, to: "contact" },
+  ];
 
   const isMobile = useMediaQuery(670);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -68,62 +77,36 @@ const Header = observer(() => {
               isMobile ? styles.list_reset : styles.header__nav__list
             }`}
           >
-            <li className={currentMenuItemClass}>
-              <Link
-                href="/"
-                to="about"
-                spy={spy}
-                smooth={smooth}
-                offset={offset}
-                duration={duration}
+            {navs.map((nav) => (
+              <li className={currentMenuItemClass} key={nav.id}>
+                <Link
+                  href={nav.to}
+                  to={nav.to}
+                  spy={spy}
+                  smooth={smooth}
+                  offset={offset}
+                  duration={duration}
+                  className={styles.header__nav__list__item__link}
+                  onClick={closeMenu}
+                >
+                  {nav.title}
+                </Link>
+              </li>
+            ))}
+            <li className={currentMenuItemClass} key={navs.length + 1}>
+              <a
+                style={{
+                  cursor: "pointer",
+                  backgroundColor: "transparent",
+                  border: "none",
+                }}
+                onClick={() => router.push("/game")}
                 className={styles.header__nav__list__item__link}
-                onClick={closeMenu}
               >
-                {about}
-              </Link>
+                {game}
+              </a>
             </li>
-            <li className={currentMenuItemClass}>
-              <Link
-                href="/"
-                to="skills"
-                spy={spy}
-                smooth={smooth}
-                offset={offset}
-                duration={duration}
-                className={styles.header__nav__list__item__link}
-                onClick={closeMenu}
-              >
-                {skills}
-              </Link>
-            </li>
-            <li className={currentMenuItemClass}>
-              <Link
-                href="/"
-                to="portfolio"
-                spy={spy}
-                smooth={smooth}
-                offset={offset}
-                duration={duration}
-                className={styles.header__nav__list__item__link}
-                onClick={closeMenu}
-              >
-                {portfolio}
-              </Link>
-            </li>
-            <li className={currentMenuItemClass}>
-              <Link
-                href="/"
-                to="contact"
-                spy={spy}
-                smooth={smooth}
-                offset={offset}
-                duration={duration}
-                className={styles.header__nav__list__item__link}
-                onClick={closeMenu}
-              >
-                {contact}
-              </Link>
-            </li>
+
             {isMobile && (
               <li className={currentMenuItemClass}>
                 <SwitchLang />

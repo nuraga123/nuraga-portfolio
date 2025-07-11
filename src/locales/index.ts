@@ -7,6 +7,7 @@ export const locales: ILocales = {
       skills: "Навыки",
       portfolio: "Портфолио",
       contact: "Обратная связь",
+      game: "Игра",
     },
     hero: {
       heroName: "Нурага Юсифли",
@@ -90,6 +91,7 @@ export const locales: ILocales = {
       formCheckboxText: "Согласен с правилами",
       formBtnText: "Отправить",
     },
+    back: "Назад",
   },
   EN: {
     header: {
@@ -97,6 +99,7 @@ export const locales: ILocales = {
       skills: "Skills",
       portfolio: "Portfolio",
       contact: "Contact",
+      game: "Game",
     },
     hero: {
       heroName: "Nuraga Yusifli",
@@ -180,6 +183,7 @@ export const locales: ILocales = {
       formCheckboxText: "I agree with the terms",
       formBtnText: "Submit",
     },
+    back: "Back",
   },
 
   AZ: {
@@ -188,6 +192,7 @@ export const locales: ILocales = {
       skills: "Bacarıqlar",
       portfolio: "Portfolio",
       contact: "Əlaqə",
+      game: "Oyun",
     },
     hero: {
       heroName: "Nurağa Yusifli",
@@ -271,6 +276,7 @@ export const locales: ILocales = {
       formCheckboxText: "Şərtlərlə razıyam",
       formBtnText: "Göndər",
     },
+    back: "Geri",
   },
 } as const;
 
