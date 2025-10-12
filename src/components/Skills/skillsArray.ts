@@ -27,15 +27,13 @@ export const skillsArray = [
   },
   {
     id: 3,
-    title: "Databases",
+    title: "Databases and TypeORM",
     text: [
       "MongoDB",
       "MariaDB",
       "PostgreSQL",
       "SQLite",
-      "Firebase",
       "Mongoose",
-      "pgAdmin",
       "Sequelize",
     ],
     iconClass: "skills__front",

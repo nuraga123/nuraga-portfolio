@@ -6,6 +6,7 @@ interface IInputProps {
   placeholder: string;
   name: string;
   required: boolean;
+  isTextarea?: boolean;
 }
 
 const ContactInput = ({
@@ -14,18 +15,28 @@ const ContactInput = ({
   placeholder = "",
   name = "",
   required = false,
+  isTextarea = false,
 }: IInputProps) => {
   return (
     <label htmlFor="name" className={styles.form__label}>
       <span className={styles.form__label__text}>{text}</span>
 
-      <input
-        type={type}
-        name={name}
-        className={styles.form__label__input}
-        placeholder={placeholder}
-        required={required}
-      />
+      {isTextarea ? (
+        <textarea
+          name={name}
+          className={styles.form__label__input}
+          placeholder={placeholder}
+          required={required}
+        />
+      ) : (
+        <input
+          type={type}
+          name={name}
+          className={styles.form__label__input}
+          placeholder={placeholder}
+          required={required}
+        />
+      )}
     </label>
   );
 };

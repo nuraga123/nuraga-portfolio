@@ -79,19 +79,9 @@ const Form = observer(() => {
         placeholder={`${placeholderStartText} ${formMessageText}`}
         type="text"
         name="message"
+        isTextarea
         required={true}
       />
-
-      <label className={styles.form__label}>
-        <span className={styles.form__label__text}>{formMessageText}</span>
-        <textarea
-          className={styles.form__label__input}
-          name={"message"}
-          placeholder={placeholderStartText + " " + formMessageText}
-          required={true}
-          rows={2}
-        />
-      </label>
 
       <label className={styles.form__checkbox}>
         <input
@@ -103,9 +93,7 @@ const Form = observer(() => {
 
         <span className={styles.form__checkbox__span} />
 
-        <span className={styles.form__checkbox__text}>
-          {formCheckboxText}я согласен с правилами
-        </span>
+        <span className={styles.form__checkbox__text}>{formCheckboxText}</span>
       </label>
 
       <button

@@ -24,11 +24,7 @@ export const locales: ILocales = {
         "Постоянно развиваюсь, изучаю современные технологии, читаю книги и смотрю видеокурсы, которые помогают мне понимать, как всё устроено, на реальных примерах.",
       aboutBooksTitle:
         "Книги, которые способствовали моему профессиональному росту:",
-      aboutBooksList: [
-        '"Выразительный JavaScript" – Марейн Хавербеке',
-        '"Совершенный код" – Стив Макконнелл',
-        '"Чистый код" – Роберт Мартин',
-      ],
+      aboutBooksList: ["Современный учебник JavaScript"],
       aboutProjectsTitle: "Активно применяю свои знания в реальных проектах:",
       aboutProjectsList: [
         "Интернет-магазины",
@@ -54,7 +50,7 @@ export const locales: ILocales = {
       algorithmsText1:
         "Знание основных алгоритмов (сортировка, поиск, динамическое программирование)",
       algorithmsText2:
-        "Структур данных (массивы, списки, деревья, графы, хеш-таблицы), их применение для решения различных задач",
+        "Структур данных (массивы, списки), их применение для решения различных задач",
     },
     portfolio: {
       portfolioTitle: "Портфолио",
@@ -88,7 +84,7 @@ export const locales: ILocales = {
       formEmailText: "E-mail *",
       formTelText: "Телефон (не обязательно)",
       formMessageText: "Сообщение *",
-      formCheckboxText: "Согласен с правилами",
+      formCheckboxText: "Согласен с правилами предоставления услуг",
       formBtnText: "Отправить",
     },
     back: "Назад",
@@ -115,11 +111,7 @@ export const locales: ILocales = {
       aboutIntro:
         "I continuously grow by learning modern technologies, reading books, and watching video courses that help me understand how things work through real-world examples.",
       aboutBooksTitle: "Books that contributed to my professional growth:",
-      aboutBooksList: [
-        '"Eloquent JavaScript" – Marijn Haverbeke',
-        '"Code Complete" – Steve McConnell',
-        '"Clean Code" – Robert C. Martin',
-      ],
+      aboutBooksList: ["A Modern JavaScript Tutorial"],
       aboutProjectsTitle:
         "I actively apply my knowledge in real-world projects:",
       aboutProjectsList: [
@@ -146,7 +138,7 @@ export const locales: ILocales = {
       algorithmsText1:
         "Knowledge of basic algorithms (sorting, search, dynamic programming)",
       algorithmsText2:
-        "Data structures (arrays, lists, trees, graphs, hash tables), their application for solving various tasks",
+        "Data structures (arrays, lists) their application for solving various tasks",
     },
     portfolio: {
       portfolioTitle: "Portfolio",
@@ -180,7 +172,7 @@ export const locales: ILocales = {
       formEmailText: "E-mail *",
       formTelText: "Phone (optional)",
       formMessageText: "Message *",
-      formCheckboxText: "I agree with the terms",
+      formCheckboxText: "I agree with the terms of service",
       formBtnText: "Submit",
     },
     back: "Back",
@@ -208,11 +200,7 @@ export const locales: ILocales = {
       aboutIntro:
         "Davamlı olaraq inkişaf edirəm, müasir texnologiyaları öyrənirəm, kitablar oxuyuram və texnologiyaların necə işlədiyini real nümunələrlə daha dərindən anlamağa kömək edən video kurslara baxıram.",
       aboutBooksTitle: "Peşəkar inkişafımda rol oynayan kitablar:",
-      aboutBooksList: [
-        '"Fasiləsiz JavaScript" – Marijn Haverbeke',
-        '"Mükəmməl Kod" – Steve McConnell',
-        '"Təmiz Kod" – Robert C. Martin',
-      ],
+      aboutBooksList: ["Müasir JavaScript Dərsliyi"],
       aboutProjectsTitle:
         "Biliklərimi real layihələrdə fəal şəkildə tətbiq edirəm:",
       aboutProjectsList: [
@@ -239,7 +227,7 @@ export const locales: ILocales = {
       algorithmsText1:
         "Əsas alqoritmləri bilmək (çeşidləmə, axtarış, dinamik proqramlaşdırma)",
       algorithmsText2:
-        "Məlumat strukturları (massivlər, siyahılar, ağaclar, qrafiklər, hash cədvəllər), onların müxtəlif problemlərin həlli üçün tətbiqi",
+        "Məlumat strukturları (massivlər) onların müxtəlif problemlərin həlli üçün tətbiqi",
     },
     portfolio: {
       portfolioTitle: "Layihələr",
@@ -273,7 +261,7 @@ export const locales: ILocales = {
       formEmailText: "E-poçt *",
       formTelText: "Telefon (istəyə bağlı)",
       formMessageText: "Mesaj *",
-      formCheckboxText: "Şərtlərlə razıyam",
+      formCheckboxText: "Mən xidmət şərtləri ilə razıyam",
       formBtnText: "Göndər",
     },
     back: "Geri",
