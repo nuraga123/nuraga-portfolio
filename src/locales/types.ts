@@ -4,6 +4,7 @@ interface ILocalesHeader {
   portfolio: string;
   contact: string;
   game: string;
+  soft: string;
 }
 
 interface ILocalesHero {
