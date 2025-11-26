@@ -8,6 +8,7 @@ export const locales: ILocales = {
       portfolio: "Портфолио",
       contact: "Обратная связь",
       game: "Игра",
+      soft: "soft",
     },
     hero: {
       heroName: "Нурага Юсифли",
@@ -96,6 +97,7 @@ export const locales: ILocales = {
       portfolio: "Portfolio",
       contact: "Contact",
       game: "Game",
+      soft: "soft",
     },
     hero: {
       heroName: "Nuraga Yusifli",
@@ -185,6 +187,7 @@ export const locales: ILocales = {
       portfolio: "Portfolio",
       contact: "Əlaqə",
       game: "Oyun",
+      soft: "soft",
     },
     hero: {
       heroName: "Nurağa Yusifli",
