@@ -13,7 +13,7 @@ const Header = observer(() => {
   const router = useRouter();
   const t = useTranslation();
   const { header } = t;
-  const { about, skills, portfolio, contact, game } = header;
+  const { about, skills, portfolio, contact, game, soft } = header;
 
   const navs = [
     { id: 1, title: about, to: "about" },
