@@ -20,7 +20,7 @@ const Header = observer(() => {
     { id: 2, title: skills, to: "skills" },
     { id: 3, title: portfolio, to: "portfolio" },
     { id: 4, title: contact, to: "contact" },
-    { id: 5, title: soft, to: "https://drive.google.com/drive/folders/1ayswuwp6YN26Aa1ysOacg7-wNCIe6bEl" },
+    { id: 5, title: soft, to: "https://mega.nz/folder/CuYGXA6Y#hidzukixYkFuBrSgkm9s4g" },
   ];
 
   const isMobile = useMediaQuery(670);
